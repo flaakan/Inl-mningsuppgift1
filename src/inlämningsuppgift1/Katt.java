@@ -4,7 +4,7 @@ package inlämningsuppgift1;
  *
  * @author Johnny
  */
-public class Katt extends Djur implements MataDjur{
+public class Katt extends Djur implements IMataDjur{
     
     Katt(String namn, int vikt){
         super(namn,vikt);
@@ -12,8 +12,9 @@ public class Katt extends Djur implements MataDjur{
         this.vikt = vikt;
     }
     
+    @Override
     public void Mata(){
-        System.out.println("Katten " + getNamn() + " ska få " + getVikt()*1000/150 + " gram mat");
+        System.out.println("Katten " + namn + " ska få " + vikt*1000/150 + " gram kattfoder");
     }
 }
     
